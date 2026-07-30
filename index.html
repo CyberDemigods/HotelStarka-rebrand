@@ -4,42 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Starka - Butikowy Hotel nad Odr&#261; | Opole</title>
-    <meta name="description" content="Hotel Starka - butikowy hotel w ponad stuletniej kamienicy nad Odr&#261; w Opolu. 20 niepowtarzalnych pokoi z klimatyzacj&#261;, mini-barem i &#347;niadaniem w cenie.">
+    <meta name="description" content="Hotel Starka - butikowy hotel w zabytkowej kamienicy nad Odr&#261; w Opolu, przy Ostr&#243;wku 19. 20 pokoi, &#347;niadanie w cenie, kilka minut spacerem od centrum.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* ======================================
            CSS VARIABLES - VINTAGE PALETTE
            ====================================== */
-        @font-face {
-            font-family: 'Old English Five';
-            src: url('fonts/OldEnglishFive.woff2') format('woff2'),
-                 url('fonts/OldEnglishFive.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
         :root {
-            --brown-dark: #3B1F0B;
-            --brown: #623304;
-            --brown-medium: #7A4A1E;
-            --brown-light: #A67C52;
-            --gold: #8C6A2E;
-            --gold-light: #C9A96E;
-            --cream: #F5F0E8;
-            --cream-dark: #E8DFD0;
-            --white: #FDFCFA;
-            --text: #2C1810;
-            --text-light: #5C4A3A;
-            --text-muted: #6B5C4D;
-            --overlay: rgba(59, 31, 11, 0.6);
+            /* Paleta wg Ksiegi Marki Hotelu Starka v1.1 (lipiec 2026) */
+            --green: #1E3525;          /* slaska zielen lesna - kolor glowny */
+            --green-soft: #2C4A35;     /* rozjasniona zielen - hovery */
+            --brass: #A88656;          /* patynowany mosiadz - linie i drobne akcenty, maks. 5% */
+            --sand: #D4C2AD;           /* cieply piaskowiec - tla wtorne, tekst na zieleni */
+            --alabaster: #FAF8F5;      /* alabastrowa biel - glowne jasne tlo */
+            --alabaster-deep: #F3EEE7; /* glebszy alabaster - sekcje naprzemienne */
+            --text: #2A2421;           /* gleboki debowy antracyt */
+            --text-light: #57504A;
+            --text-muted: #6E655C;
             --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-            --font-body: 'Raleway', 'Segoe UI', Arial, sans-serif;
+            --font-body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
         }
 
         /* ======================================
@@ -53,14 +41,14 @@
             font-family: var(--font-body);
             font-weight: 300;
             color: var(--text);
-            background: var(--white);
+            background: var(--alabaster);
             line-height: 1.7;
             font-size: 16px;
         }
 
         img { max-width: 100%; height: auto; display: block; }
-        a { color: var(--brown); text-decoration: none; transition: color 0.3s; }
-        a:hover { color: var(--gold); }
+        a { color: var(--green); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--green-soft); }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
@@ -71,9 +59,9 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 1000;
-            background: rgba(59, 31, 11, 0.95);
+            background: rgba(24, 38, 29, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+            border-bottom: 1px solid rgba(212, 194, 173, 0.2);
             transition: background 0.4s;
         }
 
@@ -88,12 +76,12 @@
         }
 
         .logo {
-            font-family: 'Old English Five', var(--font-heading);
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--gold);
-            letter-spacing: 1px;
-            text-transform: none;
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--alabaster);
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
         .logo span { display: none; }
 
@@ -103,7 +91,7 @@
             font-weight: 400;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--cream);
+            color: var(--alabaster);
             position: relative;
             padding: 4px 0;
         }
@@ -112,10 +100,10 @@
             position: absolute;
             bottom: -2px; left: 0;
             width: 0; height: 1px;
-            background: var(--gold);
+            background: var(--brass);
             transition: width 0.3s;
         }
-        .nav-links a:hover { color: var(--gold); }
+        .nav-links a:hover { color: var(--sand); }
         .nav-links a:hover::after { width: 100%; }
 
         .mobile-toggle {
@@ -126,7 +114,7 @@
         .mobile-toggle span {
             display: block;
             width: 24px; height: 2px;
-            background: var(--gold);
+            background: var(--alabaster);
             margin: 5px 0;
             transition: 0.3s;
         }
@@ -164,9 +152,9 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(59, 31, 11, 0.6) 0%,
-                rgba(59, 31, 11, 0.45) 40%,
-                rgba(59, 31, 11, 0.75) 100%
+                rgba(20, 32, 24, 0.6) 0%,
+                rgba(20, 32, 24, 0.45) 40%,
+                rgba(20, 32, 24, 0.75) 100%
             );
         }
 
@@ -174,7 +162,7 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            color: var(--cream);
+            color: var(--alabaster);
             padding: 0 24px;
         }
 
@@ -184,7 +172,7 @@
             font-weight: 500;
             letter-spacing: 6px;
             text-transform: uppercase;
-            color: var(--gold-light);
+            color: var(--sand);
             margin-bottom: 16px;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 14px rgba(0, 0, 0, 0.6);
         }
@@ -211,7 +199,7 @@
         .hero-divider {
             width: 60px;
             height: 1px;
-            background: var(--gold);
+            background: var(--brass);
             margin: 0 auto 36px;
         }
 
@@ -236,7 +224,7 @@
             display: block;
             width: 24px;
             height: 40px;
-            border: 1.5px solid var(--gold);
+            border: 1.5px solid var(--sand);
             border-radius: 12px;
             position: relative;
         }
@@ -249,7 +237,7 @@
             width: 3px;
             height: 8px;
             border-radius: 2px;
-            background: var(--gold);
+            background: var(--sand);
             animation: scrollDot 2s ease-in-out infinite;
         }
 
@@ -267,35 +255,35 @@
             font-weight: 500;
             letter-spacing: 3px;
             text-transform: uppercase;
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            border: 1px solid var(--green);
+            color: var(--green);
             background: transparent;
             cursor: pointer;
             transition: all 0.4s;
         }
         .btn:hover {
-            background: var(--gold);
-            color: var(--brown-dark);
+            background: var(--green);
+            color: var(--alabaster);
         }
         .btn-filled {
-            background: var(--gold);
-            color: var(--brown-dark);
+            background: var(--green);
+            color: var(--alabaster);
         }
         .btn-filled:hover {
-            background: var(--gold-light);
-            color: var(--brown-dark);
+            background: var(--green-soft);
+            color: var(--alabaster);
         }
         /* Hero CTA: filled for legibility over bright photos */
         .hero-content .btn {
-            background: var(--gold-light);
-            color: var(--brown-dark);
-            border-color: var(--gold-light);
+            background: var(--green);
+            color: var(--alabaster);
+            border-color: var(--green);
             box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
         }
         .hero-content .btn:hover {
-            background: var(--cream);
-            border-color: var(--cream);
-            color: var(--brown-dark);
+            background: var(--alabaster);
+            border-color: var(--alabaster);
+            color: var(--green);
         }
 
         /* ======================================
@@ -308,7 +296,7 @@
             font-weight: 500;
             letter-spacing: 5px;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--green);
             margin-bottom: 12px;
         }
 
@@ -316,7 +304,7 @@
             font-family: var(--font-heading);
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 300;
-            color: var(--brown-dark);
+            color: var(--green);
             margin-bottom: 16px;
             line-height: 1.2;
         }
@@ -324,7 +312,7 @@
         .section-divider {
             width: 50px;
             height: 1px;
-            background: var(--gold);
+            background: var(--brass);
             margin-bottom: 24px;
         }
 
@@ -338,7 +326,7 @@
         /* ======================================
            O HOTELU
            ====================================== */
-        .about { background: var(--white); }
+        .about { background: var(--alabaster); }
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -359,7 +347,7 @@
             position: absolute;
             top: 20px; left: 20px;
             right: -20px; bottom: -20px;
-            border: 1px solid var(--gold);
+            border: 1px solid var(--brass);
             z-index: -1;
         }
 
@@ -372,13 +360,13 @@
 
         .feature {
             padding: 16px 0;
-            border-top: 1px solid var(--cream-dark);
+            border-top: 1px solid var(--sand);
         }
         .feature-title {
             font-family: var(--font-heading);
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--brown);
+            color: var(--green);
             margin-bottom: 4px;
         }
         .feature-desc {
@@ -389,7 +377,7 @@
         /* ======================================
            POKOJE
            ====================================== */
-        .rooms { background: var(--cream); }
+        .rooms { background: var(--alabaster-deep); }
         .rooms-header { text-align: center; margin-bottom: 60px; }
         .rooms-header .section-divider { margin: 0 auto 24px; }
         .rooms-header .section-text { margin: 0 auto; }
@@ -401,7 +389,7 @@
         }
 
         .room-card {
-            background: var(--white);
+            background: var(--alabaster);
             overflow: hidden;
             transition: transform 0.4s, box-shadow 0.4s;
             display: flex;
@@ -410,10 +398,10 @@
             text-decoration: none;
             cursor: pointer;
         }
-        .room-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+        .room-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
         .room-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 50px rgba(59, 31, 11, 0.1);
+            box-shadow: 0 20px 50px rgba(30, 53, 37, 0.12);
         }
 
         .room-card-img {
@@ -432,8 +420,8 @@
         .room-card-badge {
             position: absolute;
             bottom: 16px; right: 16px;
-            background: var(--brown-dark);
-            color: var(--gold-light);
+            background: var(--green);
+            color: var(--sand);
             font-family: var(--font-heading);
             font-size: 1.2rem;
             padding: 8px 16px;
@@ -456,7 +444,7 @@
             font-weight: 600;
             line-height: 1.3;
             min-height: 2.6em;
-            color: var(--brown-dark);
+            color: var(--green);
             margin-bottom: 8px;
         }
         .room-card-meta {
@@ -485,15 +473,15 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 5px 12px;
-            border: 1px solid var(--brown-light);
-            color: var(--brown-medium);
-            background: rgba(166, 124, 82, 0.06);
+            border: 1px solid var(--sand);
+            color: var(--text-light);
+            background: rgba(168, 134, 86, 0.06);
         }
 
         /* ======================================
            CENNIK
            ====================================== */
-        .pricing { background: var(--white); }
+        .pricing { background: var(--alabaster); }
         .pricing-header { text-align: center; margin-bottom: 60px; }
         .pricing-header .section-divider { margin: 0 auto 24px; }
 
@@ -507,23 +495,23 @@
             font-family: var(--font-heading);
             font-size: 1rem;
             font-weight: 600;
-            color: var(--brown-dark);
+            color: var(--green);
             padding: 16px 24px;
             text-align: left;
-            border-bottom: 2px solid var(--gold);
+            border-bottom: 2px solid var(--brass);
         }
         .pricing-table tbody td {
             padding: 18px 24px;
             font-size: 0.95rem;
-            border-bottom: 1px solid var(--cream-dark);
+            border-bottom: 1px solid var(--sand);
             color: var(--text-light);
         }
-        .pricing-table tbody tr:hover { background: var(--cream); }
+        .pricing-table tbody tr:hover { background: var(--alabaster-deep); }
         .pricing-table .price {
             font-family: var(--font-heading);
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--brown);
+            color: var(--brass);
         }
         .pricing-table .price small {
             font-size: 0.7rem;
@@ -536,7 +524,7 @@
             max-width: 800px;
             margin: 32px auto 0;
             padding: 24px;
-            background: var(--cream);
+            background: var(--alabaster-deep);
             font-size: 0.85rem;
             color: var(--text-muted);
             line-height: 1.8;
@@ -544,8 +532,8 @@
         .pricing-note-highlight {
             margin-top: 18px;
             padding-top: 14px;
-            border-top: 1px solid var(--cream-dark);
-            color: var(--brown-dark);
+            border-top: 1px solid var(--sand);
+            color: var(--green);
             font-size: 0.9rem;
             line-height: 1.6;
         }
@@ -554,12 +542,17 @@
            REZERWACJA
            ====================================== */
         .reservation {
-            background: var(--brown-dark);
-            color: var(--cream);
+            background: var(--green);
+            color: var(--alabaster);
         }
-        .reservation .section-label { color: var(--gold-light); }
-        .reservation .section-title { color: var(--cream); }
-        .reservation .section-text { color: var(--gold-light); opacity: 0.8; }
+        .reservation .section-label { color: var(--sand); }
+        .reservation .section-title { color: var(--alabaster); }
+        .reservation .section-text { color: var(--sand); opacity: 0.8; }
+        /* Przyciski na ciemnej zieleni musza byc jasne */
+        .reservation .btn { border-color: var(--sand); color: var(--sand); }
+        .reservation .btn:hover,
+        .reservation .btn-filled { background: var(--sand); color: var(--green); border-color: var(--sand); }
+        .reservation .btn-filled:hover { background: var(--alabaster); border-color: var(--alabaster); color: var(--green); }
 
         .reservation-grid {
             display: grid;
@@ -575,15 +568,15 @@
             font-weight: 500;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--gold-light);
+            color: var(--sand);
             margin-bottom: 6px;
         }
         .form-input {
             width: 100%;
             padding: 12px 16px;
             background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(201, 169, 110, 0.3);
-            color: var(--cream);
+            border: 1px solid rgba(212, 194, 173, 0.3);
+            color: var(--alabaster);
             font-family: var(--font-body);
             font-size: 0.9rem;
             font-weight: 300;
@@ -591,10 +584,10 @@
         }
         .form-input:focus {
             outline: none;
-            border-color: var(--gold);
+            border-color: var(--sand);
             background: rgba(255, 255, 255, 0.12);
         }
-        .form-input::placeholder { color: rgba(245, 240, 232, 0.4); }
+        .form-input::placeholder { color: rgba(250, 248, 245, 0.45); }
 
         textarea.form-input { min-height: 100px; resize: vertical; }
 
@@ -602,7 +595,7 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23c9a96e'%3e%3cpath d='M5.5 7.5l4.5 5 4.5-5z'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23d4c2ad'%3e%3cpath d='M5.5 7.5l4.5 5 4.5-5z'/%3e%3c/svg%3e");
             background-repeat: no-repeat;
             background-position: right 12px center;
             background-size: 18px;
@@ -610,8 +603,8 @@
             cursor: pointer;
         }
         select.form-input option {
-            background: var(--brown);
-            color: var(--cream);
+            background: var(--green);
+            color: var(--alabaster);
         }
 
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -619,12 +612,12 @@
         .form-notice {
             font-size: 0.9rem;
             font-weight: 700;
-            color: var(--gold);
+            color: var(--alabaster);
             line-height: 1.6;
             margin-bottom: 20px;
             padding: 16px;
-            border: 1px solid rgba(201, 169, 110, 0.5);
-            background: rgba(201, 169, 110, 0.08);
+            border: 1px solid rgba(212, 194, 173, 0.5);
+            background: rgba(212, 194, 173, 0.08);
         }
 
         .form-checkbox {
@@ -633,41 +626,41 @@
             gap: 10px;
             margin-bottom: 12px;
             font-size: 0.82rem;
-            color: var(--gold-light);
+            color: var(--sand);
             opacity: 0.85;
             line-height: 1.5;
         }
         .form-checkbox input[type="checkbox"] {
             margin-top: 3px;
-            accent-color: var(--gold);
+            accent-color: var(--sand);
             flex-shrink: 0;
         }
-        .form-checkbox a { color: var(--gold); text-decoration: underline; }
+        .form-checkbox a { color: var(--alabaster); text-decoration: underline; }
 
         .reservation-info {
             padding-top: 16px;
         }
         .res-info-item {
             padding: 20px 0;
-            border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+            border-bottom: 1px solid rgba(212, 194, 173, 0.15);
         }
         .res-info-label {
             font-size: 0.7rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--sand);
             margin-bottom: 6px;
         }
         .res-info-value {
             font-family: var(--font-heading);
             font-size: 1.2rem;
             font-weight: 400;
-            color: var(--cream);
+            color: var(--alabaster);
         }
-        .res-info-value a { color: var(--gold-light); }
+        .res-info-value a { color: var(--sand); }
         .res-info-note {
             font-size: 0.8rem;
-            color: var(--gold-light);
+            color: var(--sand);
             opacity: 0.6;
             margin-top: 4px;
         }
@@ -675,7 +668,7 @@
         /* ======================================
            KONTAKT
            ====================================== */
-        .contact { background: var(--cream); }
+        .contact { background: var(--alabaster-deep); }
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -688,14 +681,14 @@
             font-weight: 600;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--brown);
+            color: var(--green);
             margin-bottom: 6px;
         }
         .contact-value {
             font-family: var(--font-heading);
             font-size: 1.2rem;
             font-weight: 500;
-            color: var(--brown-dark);
+            color: var(--green);
         }
 
         .contact-map {
@@ -713,9 +706,9 @@
             gap: 8px;
             margin-top: 12px;
             padding: 14px 20px;
-            background: var(--brown-dark);
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            background: var(--green);
+            border: 1px solid var(--sand);
+            color: var(--sand);
             font-family: var(--font-body);
             font-size: 0.78rem;
             font-weight: 500;
@@ -726,8 +719,8 @@
             transition: all 0.3s;
         }
         .parking-nav-btn:hover {
-            background: var(--gold);
-            color: var(--brown-dark);
+            background: var(--sand);
+            color: var(--green);
         }
 
         /* Parking link in reservation section */
@@ -738,32 +731,58 @@
             margin-top: 6px;
             font-size: 0.75rem;
             letter-spacing: 1px;
-            color: var(--gold);
+            color: var(--sand);
             text-decoration: none;
             opacity: 0.8;
             transition: opacity 0.3s;
         }
         .parking-nav-inline:hover {
             opacity: 1;
-            color: var(--gold-light);
+            color: var(--alabaster);
         }
+
+        /* ======================================
+           RYTUALY KULTURY (warstwa 2 - domyslnie ukryta,
+           wlaczana flaga SHOW_RITUALS po potwierdzeniu wlasciciela)
+           ====================================== */
+        .rituals { background: var(--green); color: var(--alabaster); }
+        .rituals .section-label { color: var(--sand); }
+        .rituals .section-title { color: var(--alabaster); }
+        .rituals .section-text { color: var(--sand); opacity: 0.9; }
+        .rituals-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+        .ritual-card { border-top: 1px solid var(--brass); padding-top: 20px; }
+        .ritual-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--alabaster);
+            margin-bottom: 10px;
+        }
+        .ritual-desc { font-size: 0.9rem; color: var(--sand); line-height: 1.7; }
+        @media (max-width: 992px) { .rituals-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .rituals-grid { grid-template-columns: 1fr; } }
 
         /* ======================================
            POLITYKA PRYWATNOSCI
            ====================================== */
-        .privacy { background: var(--white); padding: 120px 0 80px; }
+        .privacy { background: var(--alabaster); padding: 120px 0 80px; }
         .privacy h1 {
             font-family: var(--font-heading);
             font-size: 2.2rem;
             font-weight: 300;
-            color: var(--brown-dark);
+            color: var(--green);
             margin-bottom: 40px;
         }
         .privacy h2 {
             font-family: var(--font-heading);
             font-size: 1.4rem;
             font-weight: 600;
-            color: var(--brown);
+            color: var(--green);
             margin: 32px 0 12px;
         }
         .privacy p, .privacy li {
@@ -782,9 +801,9 @@
             position: fixed;
             bottom: 0; left: 0; right: 0;
             z-index: 9999;
-            background: var(--brown-dark);
-            color: var(--cream);
-            border-top: 1px solid var(--gold);
+            background: var(--green);
+            color: var(--alabaster);
+            border-top: 1px solid var(--brass);
             padding: 24px;
         }
         .cookie-banner.visible { display: block; }
@@ -796,17 +815,17 @@
         .cookie-title {
             font-family: var(--font-heading);
             font-size: 1.2rem;
-            color: var(--gold);
+            color: var(--alabaster);
             margin-bottom: 8px;
         }
         .cookie-text {
             font-size: 0.85rem;
-            color: var(--gold-light);
+            color: var(--sand);
             opacity: 0.85;
             line-height: 1.6;
             margin-bottom: 16px;
         }
-        .cookie-text a { color: var(--gold); text-decoration: underline; }
+        .cookie-text a { color: var(--sand); text-decoration: underline; }
 
         .cookie-categories {
             display: flex;
@@ -819,12 +838,13 @@
             align-items: center;
             gap: 8px;
             font-size: 0.82rem;
-            color: var(--cream);
+            color: var(--alabaster);
         }
-        .cookie-cat input[type="checkbox"] { accent-color: var(--gold); }
+        .cookie-cat input[type="checkbox"] { accent-color: var(--sand); }
         .cookie-cat .required {
             font-size: 0.7rem;
-            color: var(--text-muted);
+            color: var(--sand);
+            opacity: 0.6;
         }
 
         .cookie-buttons {
@@ -840,25 +860,25 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             cursor: pointer;
-            border: 1px solid var(--gold);
+            border: 1px solid var(--sand);
             transition: all 0.3s;
         }
         .cookie-btn-accept {
-            background: var(--gold);
-            color: var(--brown-dark);
+            background: var(--sand);
+            color: var(--green);
         }
-        .cookie-btn-accept:hover { background: var(--gold-light); }
+        .cookie-btn-accept:hover { background: var(--alabaster); }
         .cookie-btn-reject {
             background: transparent;
-            color: var(--gold);
+            color: var(--sand);
         }
-        .cookie-btn-reject:hover { background: rgba(201, 169, 110, 0.1); }
+        .cookie-btn-reject:hover { background: rgba(212, 194, 173, 0.1); }
         .cookie-btn-settings {
             background: transparent;
-            color: var(--gold-light);
-            border-color: rgba(201, 169, 110, 0.4);
+            color: var(--sand);
+            border-color: rgba(212, 194, 173, 0.4);
         }
-        .cookie-btn-settings:hover { border-color: var(--gold); }
+        .cookie-btn-settings:hover { border-color: var(--sand); }
 
         .cookie-settings-btn {
             position: fixed;
@@ -866,9 +886,9 @@
             z-index: 9998;
             width: 44px; height: 44px;
             border-radius: 50%;
-            background: var(--brown-dark);
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            background: var(--green);
+            border: 1px solid var(--sand);
+            color: var(--sand);
             font-size: 1.2rem;
             cursor: pointer;
             display: none;
@@ -877,15 +897,15 @@
             transition: 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        .cookie-settings-btn:hover { background: var(--brown); }
+        .cookie-settings-btn:hover { background: var(--green-soft); }
         .cookie-settings-btn.visible { display: flex; }
 
         /* ======================================
            FOOTER
            ====================================== */
         .site-footer {
-            background: var(--brown-dark);
-            color: var(--cream);
+            background: var(--green);
+            color: var(--alabaster);
             padding: 60px 0 0;
         }
         .footer-grid {
@@ -893,12 +913,12 @@
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 40px;
             padding-bottom: 40px;
-            border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+            border-bottom: 1px solid rgba(212, 194, 173, 0.15);
         }
         .footer-brand .logo { font-size: 1.5rem; margin-bottom: 12px; }
         .footer-desc {
             font-size: 0.85rem;
-            color: var(--gold-light);
+            color: var(--sand);
             opacity: 0.7;
             line-height: 1.7;
         }
@@ -906,7 +926,7 @@
             font-family: var(--font-heading);
             font-size: 1rem;
             font-weight: 600;
-            color: var(--gold);
+            color: var(--alabaster);
             margin-bottom: 16px;
             letter-spacing: 1px;
         }
@@ -914,11 +934,11 @@
         .footer-links li { margin-bottom: 8px; }
         .footer-links a {
             font-size: 0.85rem;
-            color: var(--gold-light);
+            color: var(--sand);
             opacity: 0.7;
             transition: opacity 0.3s;
         }
-        .footer-links a:hover { opacity: 1; color: var(--gold); }
+        .footer-links a:hover { opacity: 1; color: var(--alabaster); }
 
         .footer-bottom {
             padding: 24px 0;
@@ -930,21 +950,21 @@
         }
         .footer-copy {
             font-size: 0.8rem;
-            color: var(--gold-light);
+            color: var(--sand);
             opacity: 0.5;
         }
         .footer-forged {
             font-size: 0.6rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: rgba(201, 169, 110, 0.35);
+            color: rgba(212, 194, 173, 0.35);
         }
         .footer-forged a {
-            color: rgba(201, 169, 110, 0.5);
+            color: rgba(212, 194, 173, 0.5);
             text-decoration: none;
             transition: color 0.3s;
         }
-        .footer-forged a:hover { color: var(--gold); }
+        .footer-forged a:hover { color: var(--sand); }
 
         /* ======================================
            SCROLL TO TOP
@@ -953,9 +973,9 @@
             position: fixed;
             bottom: 20px; right: 20px;
             width: 44px; height: 44px;
-            background: var(--brown-dark);
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            background: var(--green);
+            border: 1px solid var(--sand);
+            color: var(--sand);
             font-size: 1.2rem;
             cursor: pointer;
             display: none;
@@ -965,7 +985,7 @@
             transition: 0.3s;
         }
         .scroll-top.visible { display: flex; }
-        .scroll-top:hover { background: var(--brown); }
+        .scroll-top:hover { background: var(--green-soft); }
 
         /* ======================================
            RESPONSIVE
@@ -985,11 +1005,11 @@
                 display: none;
                 position: absolute;
                 top: 72px; left: 0; right: 0;
-                background: var(--brown-dark);
+                background: var(--green);
                 flex-direction: column;
                 padding: 24px;
                 gap: 16px;
-                border-top: 1px solid rgba(201, 169, 110, 0.2);
+                border-top: 1px solid rgba(212, 194, 173, 0.2);
             }
             .nav-links.open { display: flex; }
             .mobile-toggle { display: block; }
@@ -1041,8 +1061,8 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(59, 31, 11, 0.1) 0%,
-                rgba(59, 31, 11, 0.6) 100%
+                rgba(30, 53, 37, 0.12) 0%,
+                rgba(20, 32, 24, 0.6) 100%
             );
         }
         .room-detail-hero-content {
@@ -1050,19 +1070,19 @@
             bottom: 48px;
             left: 0; right: 0;
             text-align: center;
-            color: var(--cream);
+            color: var(--alabaster);
         }
         .room-detail-hero-content .room-detail-price {
             font-family: var(--font-heading);
             font-size: 2rem;
             font-weight: 600;
-            color: var(--gold);
+            color: var(--alabaster);
         }
         .room-detail-hero-content .room-detail-price small {
             font-size: 0.8rem;
             font-family: var(--font-body);
             font-weight: 300;
-            color: var(--gold-light);
+            color: var(--sand);
         }
 
         .room-detail-back {
@@ -1072,12 +1092,12 @@
             font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--green);
             margin-bottom: 32px;
             cursor: pointer;
             transition: color 0.3s;
         }
-        .room-detail-back:hover { color: var(--gold-light); }
+        .room-detail-back:hover { color: var(--green-soft); }
 
         .room-detail-body {
             padding: 60px 0 80px;
@@ -1093,7 +1113,7 @@
             font-family: var(--font-heading);
             font-size: clamp(2rem, 4vw, 2.8rem);
             font-weight: 300;
-            color: var(--brown-dark);
+            color: var(--green);
             margin-bottom: 8px;
             line-height: 1.2;
         }
@@ -1114,7 +1134,7 @@
             font-family: var(--font-heading);
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--brown);
+            color: var(--green);
             margin-bottom: 16px;
         }
         .room-detail-amenities-list {
@@ -1128,20 +1148,20 @@
             font-size: 0.9rem;
             color: var(--text-light);
             padding: 10px 0;
-            border-bottom: 1px solid var(--cream-dark);
+            border-bottom: 1px solid var(--sand);
             display: flex;
             align-items: center;
             gap: 10px;
         }
         .room-detail-amenities-list li::before {
             content: '\2713';
-            color: var(--gold);
+            color: var(--brass);
             font-weight: 600;
             font-size: 0.85rem;
         }
 
         .room-detail-sidebar {
-            background: var(--cream);
+            background: var(--alabaster-deep);
             padding: 36px;
             position: sticky;
             top: 96px;
@@ -1150,14 +1170,14 @@
             font-family: var(--font-heading);
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--brown-dark);
+            color: var(--green);
             margin-bottom: 20px;
         }
         .room-detail-sidebar-price {
             font-family: var(--font-heading);
             font-size: 2.2rem;
             font-weight: 600;
-            color: var(--brown);
+            color: var(--brass);
             margin-bottom: 4px;
         }
         .room-detail-sidebar-price small {
@@ -1180,7 +1200,7 @@
         .room-detail-sidebar-info {
             margin-top: 24px;
             padding-top: 20px;
-            border-top: 1px solid var(--cream-dark);
+            border-top: 1px solid var(--sand);
         }
         .room-detail-sidebar-info div {
             display: flex;
@@ -1207,7 +1227,7 @@
             font-family: var(--font-heading);
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--brown);
+            color: var(--green);
             margin-bottom: 16px;
         }
         .room-gallery-grid {
@@ -1224,7 +1244,7 @@
             transition: border-color 0.3s, transform 0.3s;
         }
         .room-gallery-thumb:hover {
-            border-color: var(--gold);
+            border-color: var(--brass);
             transform: scale(1.02);
         }
         .room-gallery-thumb img {
@@ -1261,22 +1281,22 @@
             top: 20px; right: 24px;
             background: none;
             border: none;
-            color: var(--gold);
+            color: var(--sand);
             font-size: 2rem;
             cursor: pointer;
             z-index: 10001;
             transition: color 0.3s;
             line-height: 1;
         }
-        .lightbox-close:hover { color: var(--cream); }
+        .lightbox-close:hover { color: var(--alabaster); }
 
         .lightbox-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(59, 31, 11, 0.7);
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            background: rgba(20, 32, 24, 0.75);
+            border: 1px solid var(--sand);
+            color: var(--sand);
             font-size: 1.5rem;
             width: 48px;
             height: 48px;
@@ -1288,7 +1308,7 @@
             z-index: 10001;
         }
         .lightbox-nav:hover {
-            background: rgba(59, 31, 11, 0.95);
+            background: rgba(24, 38, 29, 0.95);
         }
         .lightbox-prev { left: 16px; }
         .lightbox-next { right: 16px; }
@@ -1298,7 +1318,7 @@
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            color: var(--gold-light);
+            color: var(--sand);
             font-size: 0.85rem;
             letter-spacing: 2px;
             opacity: 0.7;
@@ -1328,6 +1348,7 @@
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#o-hotelu" onclick="closeMenu(); showSection('main','o-hotelu'); return false;" data-i18n="nav_about">O hotelu</a></li>
+                <li id="navRituals" hidden><a href="#rytualy" onclick="closeMenu(); showSection('main','rytualy'); return false;" data-i18n="nav_rituals">Kultura</a></li>
                 <li><a href="#pokoje" onclick="closeMenu(); showSection('main','pokoje'); return false;" data-i18n="nav_rooms">Pokoje</a></li>
                 <li><a href="#cennik" onclick="closeMenu(); showSection('main','cennik'); return false;" data-i18n="nav_pricing">Cennik</a></li>
                 <li><a href="#rezerwacja" onclick="closeMenu(); showSection('main','rezerwacja'); return false;" data-i18n="nav_reservation">Kontakt</a></li>
@@ -1356,9 +1377,9 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <p class="hero-subtitle" data-i18n="hero_subtitle">Opole &middot; Ostr&#243;wek 19</p>
-                <h1 class="hero-title" data-i18n="hero_title">Butikowy Hotel<br>nad Odr&#261;</h1>
+                <h1 class="hero-title" data-i18n="hero_title">Zanurz si&#281;<br>w kulturze</h1>
                 <div class="hero-divider"></div>
-                <p class="hero-desc" data-i18n="hero_desc">Zapraszamy do pi&#281;knego butikowego hotelu w ponad stuletniej kamienicy w centrum Opola, nad malowniczym rozwidleniem Odry.</p>
+                <p class="hero-desc" data-i18n="hero_desc">Butikowy hotel w zabytkowej kamienicy nad Odr&#261;, kilka minut spacerem od centrum Opola.</p>
                 <a href="#rezerwacja" class="btn" data-i18n="hero_btn">Sprawd&#378; dost&#281;pno&#347;&#263;</a>
             </div>
             <a href="#o-hotelu" class="hero-scroll-hint" aria-label="Scroll down">
@@ -1381,12 +1402,12 @@
                             Szanowni Pa&#324;stwo, chcieliby&#347;my zaprosi&#263; Was do odwiedzenia naszego hotelu. Przez dwana&#347;cie lat prowadzenia restauracji zebrali&#347;my wiele informacji od naszych go&#347;ci &#8212; co im si&#281; podoba, a co nie &#8212; w hotelach na ca&#322;ym &#347;wiecie. Dzi&#281;ki tym informacjom starali&#347;my si&#281; stworzy&#263; miejsce, w kt&#243;rym sp&#281;dz&#261; Pa&#324;stwo mi&#322;o czas. Zar&#243;wno wyposa&#380;enie pokoi, jak i obs&#322;ug&#281; pr&#243;bowali&#347;my dobra&#263; kluczem, jakim pos&#322;ugujemy si&#281; od lat w restauracji.
                         </p>
                         <p class="section-text" data-i18n="about_text2">
-                            Starali&#347;my si&#281; stworzy&#263; miejsce, w kt&#243;rym poczuj&#261; si&#281; Pa&#324;stwo jak w domu. Nasz hotel znajduje si&#281; w ponad stuletniej kamienicy, kt&#243;rej architektura pozwoli&#322;a nam na stworzenie 20 niepowtarzalnych pokoi. Ka&#380;dy z nich jest wyposa&#380;ony w telewizj&#281;, mini-bar, klimatyzacj&#281;, sejf oraz internet.
+                            Starali&#347;my si&#281; stworzy&#263; miejsce, w kt&#243;rym poczuj&#261; si&#281; Pa&#324;stwo jak w domu. Nasz hotel znajduje si&#281; w ponad stuletniej kamienicy, kt&#243;rej architektura pozwoli&#322;a nam na stworzenie 20 pokoi. Ka&#380;dy z nich jest wyposa&#380;ony w telewizj&#281;, mini-bar, klimatyzacj&#281;, sejf oraz internet.
                         </p>
                         <div class="about-features">
                             <div class="feature">
                                 <div class="feature-title" data-i18n="about_feat1_title">20 pokoi</div>
-                                <div class="feature-desc" data-i18n="about_feat1_desc">Ka&#380;dy niepowtarzalny</div>
+                                <div class="feature-desc" data-i18n="about_feat1_desc">Ka&#380;dy urz&#261;dzony inaczej</div>
                             </div>
                             <div class="feature">
                                 <div class="feature-title" data-i18n="about_feat2_title">&#346;niadanie</div>
@@ -1406,14 +1427,43 @@
             </div>
         </section>
 
+        <!-- RYTUALY KULTURY (warstwa 2 - ukryta do potwierdzenia przez wlasciciela,
+             ze gramofony / biblioteki / sztuka / Sala Sniadaniowa fizycznie dzialaja) -->
+        <section class="rituals" id="rytualy" hidden>
+            <div class="container">
+                <p class="section-label" data-i18n="rituals_label">Analogowa go&#347;cinno&#347;&#263;</p>
+                <h2 class="section-title" data-i18n="rituals_title">Rytua&#322;y kultury</h2>
+                <div class="section-divider"></div>
+                <p class="section-text" data-i18n="rituals_text">Ksi&#261;&#380;ka, muzyka i sztuka s&#261; u nas codzienn&#261; praktyk&#261;, nie dekoracj&#261;. Ka&#380;dy rytua&#322; jest zaproszeniem &#8212; korzystaj&#261; Pa&#324;stwo wtedy, kiedy maj&#261; na to ochot&#281;.</p>
+                <div class="rituals-grid">
+                    <div class="ritual-card">
+                        <h3 class="ritual-title" data-i18n="ritual_vinyl_title">Gramofon i winyle</h3>
+                        <p class="ritual-desc" data-i18n="ritual_vinyl_desc">W ka&#380;dym pokoju znajduje si&#281; gramofon. P&#322;yty &#8212; jazz, klasyka i polska muzyka filmowa &#8212; wypo&#380;ycz&#261; Pa&#324;stwo bezp&#322;atnie w recepcji.</p>
+                    </div>
+                    <div class="ritual-card">
+                        <h3 class="ritual-title" data-i18n="ritual_books_title">Biblioteki pi&#281;trowe</h3>
+                        <p class="ritual-desc" data-i18n="ritual_books_desc">Zostaw swoj&#261; ksi&#261;&#380;k&#281;, zabierz nasz&#261;. Biblioteka dzia&#322;a na zaufaniu &#8212; bez formularza i terminu zwrotu.</p>
+                    </div>
+                    <div class="ritual-card">
+                        <h3 class="ritual-title" data-i18n="ritual_art_title">Polska sztuka</h3>
+                        <p class="ritual-desc" data-i18n="ritual_art_desc">W pokojach dzie&#322;a polskich artyst&#243;w, wybrane we wsp&#243;&#322;pracy z Galeri&#261; Bunk. Informacja o arty&#347;cie i dziele pozostaje dyskretna.</p>
+                    </div>
+                    <div class="ritual-card">
+                        <h3 class="ritual-title" data-i18n="ritual_breakfast_title">Sala &#346;niadaniowa</h3>
+                        <p class="ritual-desc" data-i18n="ritual_breakfast_desc">Poranek ma w&#322;asn&#261; sal&#281; i w&#322;asny rytm. Kaw&#281; mielimy na bie&#380;&#261;co, a ciep&#322;e dania przygotowujemy po zam&#243;wieniu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- POKOJE -->
         <section class="rooms" id="pokoje">
             <div class="container">
                 <div class="rooms-header">
                     <p class="section-label" data-i18n="rooms_label">Pokoje</p>
-                    <h2 class="section-title" data-i18n="rooms_title">Dwadzie&#347;cia niepowtarzalnych wn&#281;trz</h2>
+                    <h2 class="section-title" data-i18n="rooms_title">Dwadzie&#347;cia pokoi, siedem kategorii</h2>
                     <div class="section-divider"></div>
-                    <p class="section-text" data-i18n="rooms_text">Ka&#380;dy pok&#243;j w Hotel Starka posiada w&#322;asny, unikalny charakter. Wszystkie wyposa&#380;one s&#261; w klimatyzacj&#281;, sejf, mini-bar, telewizj&#281; VOD, Wi-Fi oraz ekspres do kawy.</p>
+                    <p class="section-text" data-i18n="rooms_text">Ka&#380;dy pok&#243;j w Hotel Starka ma w&#322;asny uk&#322;ad i charakter. Wszystkie wyposa&#380;one s&#261; w klimatyzacj&#281;, sejf, mini-bar, telewizj&#281; VOD, Wi-Fi oraz ekspres do kawy.</p>
                 </div>
                 <div class="rooms-grid">
 
@@ -1462,7 +1512,7 @@
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_view_name">Pok&#243;j Dwuosobowy z Widokiem na Rzek&#281;</h3>
-                            <p class="room-card-desc" data-i18n="room_view_desc">Pok&#243;j dwuosobowy z malowniczym widokiem na rzek&#281;, w jednym z najurokliwszych zak&#261;tk&#243;w opolskiej star&#243;wki.</p>
+                            <p class="room-card-desc" data-i18n="room_view_desc">Pok&#243;j dwuosobowy z widokiem na rzek&#281;, w spokojnym zak&#261;tku opolskiej star&#243;wki.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_riverview">Widok na rzek&#281;</span>
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
@@ -1702,9 +1752,9 @@
 
                         <!-- RODO-COMPLIANT CLAUSE -->
                         <div style="padding: 16px; border: 1px solid rgba(201,169,110,0.2); margin-bottom: 20px;">
-                            <p style="font-size: 0.78rem; color: var(--gold-light); opacity: 0.75; line-height: 1.7; margin-bottom: 12px;">
+                            <p style="font-size: 0.78rem; color: var(--sand); opacity: 0.75; line-height: 1.7; margin-bottom: 12px;">
                                 <strong>Klauzula informacyjna:</strong> Administratorem Pani/Pana danych osobowych jest Restauracja i Hotel Starka K.I.M. Cebula Sp. J. z siedzib&#261; przy ul. Ostr&#243;wek 19, 45-082 Opole (NIP: 754-30-85-381). Dane osobowe b&#281;d&#261; przetwarzane w celu realizacji zapytania rezerwacyjnego oraz ewentualnego zawarcia i wykonania umowy o &#347;wiadczenie us&#322;ug hotelowych (podstawa prawna: art. 6 ust. 1 lit. b RODO - wykonanie umowy). Dane b&#281;d&#261; przechowywane przez okres niezb&#281;dny do realizacji rezerwacji oraz wype&#322;nienia obowi&#261;zk&#243;w prawnych (rachunkowo&#347;&#263;, podatki). Przys&#322;uguj&#261; Pani/Panu prawa: dost&#281;pu do danych, sprostowania, usuni&#281;cia, ograniczenia przetwarzania, przenoszenia danych, sprzeciwu oraz wniesienia skargi do Prezesa Urz&#281;du Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa). Podanie danych jest dobrowolne, ale niezb&#281;dne do realizacji rezerwacji. Dane nie b&#281;d&#261; przekazywane do pa&#324;stw trzecich. Kontakt w sprawach ochrony danych: rezerwacja@hotel-starka.pl.
-                                <a href="#polityka-prywatnosci" onclick="showSection('privacy'); return false;" style="color: var(--gold); text-decoration: underline;">Pe&#322;na polityka prywatno&#347;ci</a>.
+                                <a href="#polityka-prywatnosci" onclick="showSection('privacy'); return false;" style="color: var(--brass); text-decoration: underline;">Pe&#322;na polityka prywatno&#347;ci</a>.
                             </p>
                         </div>
 
@@ -1816,7 +1866,7 @@
     <div class="page-section" id="page-privacy">
         <section class="privacy">
             <div class="container" style="max-width: 800px;">
-                <a href="#home" onclick="showSection('main'); return false;" style="display: inline-block; margin-bottom: 24px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold);" data-i18n="privacy_back">&larr; Powr&#243;t do strony g&#322;&#243;wnej</a>
+                <a href="#home" onclick="showSection('main'); return false;" style="display: inline-block; margin-bottom: 24px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--brass);" data-i18n="privacy_back">&larr; Powr&#243;t do strony g&#322;&#243;wnej</a>
 
                 <h1 data-i18n="privacy_title">Polityka Prywatno&#347;ci</h1>
 
@@ -2158,7 +2208,7 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_apartment_name">Apartament</h1>
-                            <p class="room-detail-desc" data-i18n="rd_apartment_desc_full">Najwi&#281;ksze i najbardziej ekskluzywne wn&#281;trze w hotelu &#8212; apartament &#322;&#261;cz&#261;cy przedpok&#243;j, przestronny salon i sypialni&#281; z pi&#281;knym widokiem na rzek&#281;. &#321;azienka z prysznicem i luksusow&#261; wolnostoj&#261;c&#261; wann&#261;. Idealny na romantyczny weekend lub wyj&#261;tkow&#261; okazj&#281;. W standardzie ka&#380;dego pokoju: telewizja z Chromecastem, klimatyzacja, sejf, szybkie Wi-Fi, ekspres do kawy, biurko do pracy oraz p&#322;atny minibar.</p>
+                            <p class="room-detail-desc" data-i18n="rd_apartment_desc_full">Najwi&#281;ksze wn&#281;trze w hotelu &#8212; apartament &#322;&#261;cz&#261;cy przedpok&#243;j, przestronny salon i sypialni&#281; z widokiem na rzek&#281;. &#321;azienka z prysznicem i wolnostoj&#261;c&#261; wann&#261;. Dobre miejsce na weekend we dwoje lub d&#322;u&#380;szy pobyt. W standardzie ka&#380;dego pokoju: telewizja z Chromecastem, klimatyzacja, sejf, szybkie Wi-Fi, ekspres do kawy, biurko do pracy oraz p&#322;atny minibar.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
                             <ul class="room-detail-amenities-list">
@@ -2232,7 +2282,7 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_view_name">Pok&#243;j Dwuosobowy z Widokiem na Rzek&#281;</h1>
-                            <p class="room-detail-desc" data-i18n="rd_view_desc_full">Pok&#243;j dwuosobowy z malowniczym widokiem na rzek&#281; &#8212; woda tu&#380; za oknem, w jednym z najurokliwszych zak&#261;tk&#243;w opolskiej star&#243;wki. Prywatna &#322;azienka z prysznicem. W standardzie ka&#380;dego pokoju: telewizja z Chromecastem, klimatyzacja, sejf, szybkie Wi-Fi, ekspres do kawy, biurko do pracy oraz p&#322;atny minibar.</p>
+                            <p class="room-detail-desc" data-i18n="rd_view_desc_full">Pok&#243;j dwuosobowy z widokiem na rzek&#281; &#8212; woda tu&#380; za oknem, w spokojnym zak&#261;tku opolskiej star&#243;wki. Prywatna &#322;azienka z prysznicem. W standardzie ka&#380;dego pokoju: telewizja z Chromecastem, klimatyzacja, sejf, szybkie Wi-Fi, ekspres do kawy, biurko do pracy oraz p&#322;atny minibar.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
                             <ul class="room-detail-amenities-list">
@@ -2290,7 +2340,7 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_mur_name">Pok&#243;j Deluxe z Murem Pruskim</h1>
-                            <p class="room-detail-desc" data-i18n="rd_mur_desc_full">Jeden z dw&#243;ch wyj&#261;tkowych pokoi z ods&#322;oni&#281;tym, zabytkowym murem pruskim &#8212; drewniany szkielet wype&#322;niony ceg&#322;&#261; spotyka tu nowoczesne przeszklenie. Widok na rzek&#281; dope&#322;nia ca&#322;o&#347;ci. Prywatna &#322;azienka z prysznicem. W standardzie ka&#380;dego pokoju: telewizja z Chromecastem, klimatyzacja, sejf, szybkie Wi-Fi, ekspres do kawy, biurko do pracy oraz p&#322;atny minibar.</p>
+                            <p class="room-detail-desc" data-i18n="rd_mur_desc_full">Jeden z dw&#243;ch pokoi z ods&#322;oni&#281;tym, zabytkowym murem pruskim &#8212; drewniany szkielet wype&#322;niony ceg&#322;&#261; spotyka tu nowoczesne przeszklenie. Widok na rzek&#281; dope&#322;nia ca&#322;o&#347;ci. Prywatna &#322;azienka z prysznicem. W standardzie ka&#380;dego pokoju: telewizja z Chromecastem, klimatyzacja, sejf, szybkie Wi-Fi, ekspres do kawy, biurko do pracy oraz p&#322;atny minibar.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
                             <ul class="room-detail-amenities-list">
@@ -2342,7 +2392,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">Hotel Starka</div>
-                    <p class="footer-desc" data-i18n="footer_desc">Butikowy hotel w ponad stuletniej kamienicy nad Odr&#261;. 20 niepowtarzalnych pokoi w centrum Opola.</p>
+                    <p class="footer-desc" data-i18n="footer_desc">Butikowy hotel w ponad stuletniej kamienicy nad Odr&#261;. 20 pokoi w centrum Opola.</p>
                 </div>
                 <div>
                     <h4 class="footer-heading" data-i18n="footer_nav">Nawigacja</h4>
@@ -2517,7 +2567,16 @@
         window.addEventListener('popstate', function() {
             applyHashFromURL();
         });
+        // WARSTWA 2 (Ksiega Marki 2026): rytualy kultury.
+        // Ustawic na true DOPIERO gdy wlasciciel potwierdzi, ze gramofony, biblioteki
+        // pietrowe, sztuka Galerii Bunk i Sala Sniadaniowa fizycznie dzialaja.
+        const SHOW_RITUALS = false;
+
         document.addEventListener('DOMContentLoaded', function() {
+            if (SHOW_RITUALS) {
+                document.getElementById('rytualy').hidden = false;
+                document.getElementById('navRituals').hidden = false;
+            }
             applyHashFromURL();
         });
 
@@ -2626,8 +2685,8 @@
             }).then(function(response) {
                 if (response.ok) {
                     form.innerHTML = '<div style="text-align:center; padding: 40px 0;">' +
-                        '<p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); margin-bottom: 12px;">' + thanksTitle + '</p>' +
-                        '<p style="color: var(--gold-light); opacity: 0.9;">' + thanksText + '</p>' +
+                        '<p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--brass); margin-bottom: 12px;">' + thanksTitle + '</p>' +
+                        '<p style="color: var(--sand); opacity: 0.9;">' + thanksText + '</p>' +
                         '</div>';
                 } else {
                     alert(errorText);
