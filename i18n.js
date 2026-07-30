@@ -99,8 +99,6 @@
       '  list-style: none;',
       '  margin: 0;',
       '  padding: 4px 0;',
-      '  max-height: 320px;',
-      '  overflow-y: auto;',
       '}',
       '.lang-switcher.open .lang-switcher__menu {',
       '  display: block;',
